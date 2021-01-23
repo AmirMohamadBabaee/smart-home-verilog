@@ -35,7 +35,18 @@ module CoolHeatSystem (
 );
 
 	/* write your code here */
+	ModePower mode_power1(
+		.chs_conf(chs_conf),
+		.chs_power(chs_power),
+		.chs_mode(chs_mode)
+	);
 	
+	FanSpeed fan_speed1(
+		.arst(arst),
+		.clk(clk),
+		.speed(speed),
+		.pwm_data(pwm_data)
+	);
 	/* write your code here */
 
 endmodule

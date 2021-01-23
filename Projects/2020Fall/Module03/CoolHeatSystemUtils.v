@@ -23,6 +23,20 @@
 /***********************************************************/
 /************** Design Your Own Modules Below **************/
 
+module Counter_8bit(
+	input arst	,		// reset [asynch]
+	input clk	,		// clock [posedge]
+	output reg [7:0] counter_output
+);
+
+	always @(posedge clk or negedge arst)
+		if (!arst)
+			counter_output <= 8'b00000000;
+		else
+			counter_output <= counter_output + 1;
+		
+	
+endmodule
 
 	
 /************** Design Your Own Modules Above **************/

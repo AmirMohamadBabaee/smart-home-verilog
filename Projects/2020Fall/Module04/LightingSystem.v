@@ -30,7 +30,23 @@ module LightingSystem (
 );
 
 	/* write your code here */
-	
+	WindowShadeDegree wshade1(
+		.tcode(tcode),
+		.ulight(ulight),
+		.wshade(wshade)
+	);
+
+	ActiveLamps active_lamps1(
+		.tcode(tcode),
+		.ulight(ulight),
+		.length(lenght),
+		.active_lights(lightnum)
+	);
+
+	LampState lamp_state1(
+		.active_lights(lightnum),
+		.lights_state(lightstate)
+	);
 	/* write your code here */
 
 endmodule

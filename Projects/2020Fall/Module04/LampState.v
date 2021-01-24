@@ -27,6 +27,11 @@ module LampState (
 
 	/* write your code here */
 	
+	Decoder4to16_less decoder1(
+		.in(active_lights),
+		.out(lights_state)
+	);
+	
 	/* write your code here */
 
 endmodule

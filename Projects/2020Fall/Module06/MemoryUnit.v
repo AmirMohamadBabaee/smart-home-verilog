@@ -29,7 +29,13 @@ module MemoryUnit (
 );
     
 	/* write your code here */
+	genvar i;
 	
+	generate
+		for(i=0;i<35;i=i+1) begin : loop
+			D_FF dff(.arst(arst), .clk(clk), .en(wren), .data(din[i]), .out(dout[i]));
+		end
+	endgenerate
 	/* write your code here */
 
 endmodule

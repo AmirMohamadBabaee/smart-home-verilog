@@ -31,9 +31,9 @@ module FanSpeed (
 	/* write your code here */
 	wire [7:0] counter;
 	
-	always @(posedge clk or negedge arst)
+	always @(posedge clk or posedge arst)
 		begin
-			if (!arst)
+			if (arst)
 				pwm_data = 1'b0;
 			else if (speed > counter)
 				pwm_data = 1'b1;
